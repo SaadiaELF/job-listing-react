@@ -3,7 +3,11 @@ import React from "react";
 const Card = (props) => {
   return (
     <div className="card">
-      <img className="card__img" src={props.imgSrc} alt={props.imgAlt} />
+      <img
+        className="card__img"
+        src={props.imgSrc}
+        alt={props.imgAlt}
+      />
       <div className="card__body">
         <h3 className="card__title">
           {props.company}
@@ -20,11 +24,19 @@ const Card = (props) => {
       <div className="card__footer">
         <span className="tag">{props.role}</span>
         <span className="tag">{props.level}</span>
-        {props.languages.map((lang) => {
-          return <span className="tag">{lang}</span>;
+        {props.languages.map((lang, i) => {
+          return (
+            <span key={i} className="tag">
+              {lang}
+            </span>
+          );
         })}
-        {props.tools.map((tool) => {
-          return <span className="tag">{tool}</span>;
+        {props.tools.map((tool, i) => {
+          return (
+            <span key={i} className="tag">
+              {tool}
+            </span>
+          );
         })}
       </div>
     </div>
