@@ -1,39 +1,39 @@
 import React from "react";
 
-const Card = (props) => {
+const Card = ({ jobInfo }) => {
   return (
     <div className="card">
-      <img className="card__img" src={props.imgSrc} alt={props.imgAlt} />
+      <img className="card__img" src={jobInfo.logo} alt={jobInfo.company} />
       <div className="card__body">
         <h3 className="card__title">
-          <span className="span-title">{props.company}</span>
-          {props.new ? <span className="status status--new">New!</span> : ""}
-          {props.featured ? (
+          <span className="span-title">{jobInfo.company}</span>
+          {jobInfo.new ? <span className="status status--new">New!</span> : ""}
+          {jobInfo.featured ? (
             <span className="status status--featured">Featured</span>
           ) : (
             ""
           )}
         </h3>
-        <h2 className="card__subtitle">{props.position}</h2>
+        <h2 className="card__subtitle">{jobInfo.position}</h2>
         <div className="card__text">
-          <span className="info">{props.time}</span>
+          <span className="info">{jobInfo.time}</span>
           <span className="info">.</span>
-          <span className="info">{props.contract}</span>
+          <span className="info">{jobInfo.contract}</span>
           <span className="info">.</span>
-          <span className="info">{props.location}</span>
+          <span className="info">{jobInfo.location}</span>
         </div>
       </div>
       <div className="card__footer">
-        <span className="tag">{props.role}</span>
-        <span className="tag">{props.level}</span>
-        {props.languages.map((lang, i) => {
+        <span className="tag">{jobInfo.role}</span>
+        <span className="tag">{jobInfo.level}</span>
+        {jobInfo.languages.map((lang, i) => {
           return (
             <span key={i} className="tag">
               {lang}
             </span>
           );
         })}
-        {props.tools.map((tool, i) => {
+        {jobInfo.tools.map((tool, i) => {
           return (
             <span key={i} className="tag">
               {tool}
