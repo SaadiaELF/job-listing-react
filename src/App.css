@@ -73,11 +73,16 @@ body {
     background-color: var(--primary-dark-cyan);
 }
 
+.card__body {
+    margin: 0.5rem;
+}
+
 .card__text {
     display: flex;
     gap: 0.5rem;
     margin: 1.2rem 0;
-
+    padding: 0 0 1rem;
+    border-bottom: 1px solid gray;
 }
 
 .info {
@@ -111,6 +116,10 @@ body {
     .card__img {
         width: initial;
         position: initial;
+    }
+
+    .card__text {
+        border: none;
     }
 
     .card__footer {
