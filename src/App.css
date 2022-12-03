@@ -29,8 +29,9 @@ body {
 }
 
 .card {
+    position: relative;
     width: 80%;
-    margin: 1rem auto;
+    margin: 1.5rem auto;
     padding: 1rem;
     background-color: var(--white);
     border-radius: 8px;
@@ -39,15 +40,14 @@ body {
 
 .card__img {
     position: absolute;
-    top: -20px;
-    z-index: 2;
+    top: -40px;
     width: 80px;
 }
 
 .card__title {
     display: flex;
     gap: 0.5rem;
-    margin: 1.2rem 0;
+    margin: 2rem 0 1.5rem;
     align-items: center;
     color: var(--primary-dark-cyan);
 }
