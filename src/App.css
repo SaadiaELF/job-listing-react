@@ -100,7 +100,20 @@ body {
 }
 
 @media screen and (min-width:800px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        padding: 0rem 2rem;
+    }
+
     .card__img {
         width: initial;
+        position: initial;
+    }
+
+    .card__footer {
+        margin-left: auto;
     }
 }
